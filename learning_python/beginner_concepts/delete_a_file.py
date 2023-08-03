@@ -6,7 +6,7 @@ import shutil
 path = "emptfolder"
 
 try:
-    #os.rmdir(path)  # delete a folder
+    os.rmdir(path)  # delete a folder
     # shutil.rmtree(path)  # removes a directory along with its contents
 except FileNotFoundError as e:
     print(e)

@@ -1,7 +1,10 @@
 class Car:
+
+    wheels = 4  # class variable
+
     def __init__(self, make, model, year, color):
         self.make = make  # attributes
-        self.model = model
+        self.model = model  # these are |instance variables|
         self.year = year
         self.color = color
 

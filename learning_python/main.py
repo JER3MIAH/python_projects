@@ -1,6 +1,5 @@
-import time
+import os
 
-for seconds in range(10, 0, -1):
-    print(seconds)
-    time.sleep(1)
-print('Happy birthday')
+path = "C:\\Users\\HP\\Desktop\\testing.py"
+
+os.remove(path)

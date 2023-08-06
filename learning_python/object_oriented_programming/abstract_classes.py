@@ -4,7 +4,7 @@
 # prevents a user from creating an object of that class
 # + compels a user to override abstract methods in a child class
 
-from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod  # abstract based class(abc)
 
 class Vehicle(ABC):
 

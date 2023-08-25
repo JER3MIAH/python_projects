@@ -9,3 +9,6 @@ hobbies.append("drinking water")  # adds an item to the end of my list
 hobbies.sort()  # this sorts the lists alphabetically
 
 print(hobbies)
+
+for i in hobbies:
+    print(i)

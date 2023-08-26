@@ -2,7 +2,7 @@
 # Python threading tutorial
 # ******************************************************
 # thread =  a flow of execution. Like a separate order of instructions.
-#                  However each thread takes a turn running to achieve concurrency
+#                  However, each thread takes a turn running to achieve concurrency
 #                  GIL = (global interpreter lock),
 #                  allows only one thread to hold the control of the Python interpreter at any one time
 

@@ -1,13 +1,12 @@
-#!/usr/bin/python3
-def weight_average(my_list=[]):
-    if not my_list:
-        return 0
+from tkinter import *
 
-    number = 0
-    denomenator = 0
+window = Tk()  # instantiate an instance of a window
+window.geometry("720x540")
+window.title("Jeremiah's first window")
 
-    for tupl in my_list:
-        number += tupl[0] * tupl[1]
-        denomenator += tupl[1]
+icon = PhotoImage(file="clock.png")
+window.iconphoto(True, icon)
+window.config(background="#5cfcff")
 
-    return number / denomenator
+window.mainloop()  # replace window on computer screen
+

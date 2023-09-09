@@ -1,12 +1,12 @@
-from tkinter import *
+class PlayerCharacter:
+    def __init__(self, name) -> None:
+        self.name = name
 
-window = Tk()  # instantiate an instance of a window
-window.geometry("720x540")
-window.title("Jeremiah's first window")
+    def run():
+        print("running")
 
-icon = PhotoImage(file="clock.png")
-window.iconphoto(True, icon)
-window.config(background="#5cfcff")
 
-window.mainloop()  # replace window on computer screen
+player1 = PlayerCharacter
 
+player2 = player1('JOJOO')
+print(player2.name)

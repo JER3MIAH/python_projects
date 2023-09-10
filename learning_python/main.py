@@ -1,43 +1,16 @@
-class Pets():
-    animals = []
-    def __init__(self, animals):
-        self.animals = animals
+from functools import reduce
 
-    def walk(self):
-        for animal in self.animals:
-            print(animal.walk())
+# 1 Capitalize all the pet names and print the list
+my_pets = ['sisi', 'bibi', 'titi', 'carla']
 
-class Cat():
-    is_lazy = True
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# 2 Zip the 2 lists into a list of tuples, but sort the numbers from lowest to highest.
+my_strings = ['a', 'b', 'c', 'd', 'e']
+my_numbers = [5, 4, 3, 2, 1]
 
-    def walk(self):
-        return f'{self.name} is just walking around'
 
-class Simon(Cat):
-    def sing(self, sounds):
-        return f'{sounds}'
+# 3 Filter the scores that pass over 50%
+scores = [73, 20, 65, 19, 76, 100, 88]
 
-class Sally(Cat):
-    def sing(self, sounds):
-        return f'{sounds}'
 
-#1 Add nother Cat
-class Jerry(Cat):
-    def sing(self, sounds):
-        return f'{sounds}'
-
-#2 Create a list of all of the pets (create 3 cat instances from the above)
-cat1 = Simon('simon', 34)
-cat2 = Sally('sally', 23)
-cat3 = Jerry('jerry', 20)
-my_cats = [cat1, cat2, cat3]
-
-#3 Instantiate the Pet class with all your cats use variable my_pets
-my_pets = Pets(my_cats)
-
-#4 Output all of the cats walking using the my_pets instance
-my_pets.walk()
+# 4 Combine all the numbers that are in a list on this file using reduce (my_numbers and scores). What is the total?

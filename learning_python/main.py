@@ -4,11 +4,11 @@ from functools import reduce
 my_pets = ['sisi', 'bibi', 'titi', 'carla']
 
 
-def captialize(item):
+def capitalize(item):
     return item.upper()
 
 
-print(list(map(captialize, my_pets)))
+print(list(map(capitalize, my_pets)))
 
 # 2 Zip the 2 lists into a list of tuples, but sort the numbers from lowest to highest.
 my_strings = ['a', 'b', 'c', 'd', 'e']

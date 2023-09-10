@@ -1,10 +1,6 @@
-# square
-my_list = [5, 4, 3]
+# list comprehension
 
-print(list(map(lambda item: item * item, my_list)))
+my_list = [num ** 2 for num in range(0, 100)]
+my_list2 = [(num ** 2) for num in range(0, 100) if num % 2 == 0]
 
-# List sorting
-a = [(0, 2), (4, 3), (9, 9), (10, -1)]
-
-a.sort(key=lambda x: x[-1])
-print(a)
+print(my_list2)

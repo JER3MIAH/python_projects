@@ -1,7 +1,3 @@
-simple_dict = {
-    'a': 1,
-    'b': 2
-}
-
-my_dict = {key:value**2 for key, value in simple_dict.items()}
+my_list = [1, 2, 3]
+my_dict = {num: num*2 for num in my_list}
 print(my_dict)

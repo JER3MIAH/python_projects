@@ -1,17 +1,24 @@
-# Create an @authenticated decorator that only allows the function to run if user1 has 'valid' set to True:
-user1 = {
-    'name': 'Sorna',
-    'valid': True
-}
+def fib(num):
+    a = 0
+    b = 1
+    for i in range(num):
+        yield a
+        temp = a
+        a = b
+        b = b + temp  # generator method
 
-def authenticated(func):
-    def wrapper(*args, **kwargs):
-        if args[0]['valid']:
-            return func(*args, **kwargs)
-    return wrapper
+for x in fib(20):
+    print(x)
 
-@authenticated
-def message_friends(user):
-    print('message has been sent')
+# def fib(num):
+#     a = 0
+#     b = 1
+#     result = []
+#     for i in range(num):
+#         result.append(a)
+#         temp = a
+#         a = b
+#         b = b + temp
+#     return result
 
-message_friends(user1)
+# print(fib(20))

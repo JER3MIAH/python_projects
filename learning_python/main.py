@@ -5,10 +5,10 @@ def fib(num):
         yield a
         temp = a
         a = b
-        b = b + temp  # generator method
+        b = temp + b
 
-for x in fib(20):
-    print(x)
+for i in fib(20):
+    print(i)        #generator method
 
 # def fib(num):
 #     a = 0

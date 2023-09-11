@@ -1,17 +1,17 @@
-from time import time
+# Create an @authenticated decorator that only allows the function to run is user1 has 'valid' set to True:
+user1 = {
+    'name': 'Sorna',
+    'valid': True
+}
 
-def performance(func):
-    def wrapper(*args, **kwargs):
-        t1 = time()
-        res = func(*args, **kwargs)
-        t2 = time()
-        print(f'It took {t2 - t1} seconds to run')
-        return res
-    return wrapper
+def authenticated(fn):
+  def wrapper(*args, **kwargs):
+    if args[0]['valid']:
+        return fn(*args, **kwargs)
+  return wrapper
 
-@performance
-def longfunc():
-    for i in range(100000000):
-        1**4
+@authenticated
+def message_friends(user):
+    print('message has been sent')
 
-longfunc()
+message_friends(user1)

@@ -1,12 +1,17 @@
-def my_decorator(func):
-    def wrap_func():
-        print('*******')
-        func()
-        print('*******')
-    return wrap_func
+from time import time
 
-@my_decorator
-def hello():
-    print('Jojooooooo')
+def performance(func):
+    def wrapper(*args, **kwargs):
+        t1 = time()
+        res = func(*args, **kwargs)
+        t2 = time()
+        print(f'It took {t2 - t1} seconds to run')
+        return res
+    return wrapper
 
-hello()
+@performance
+def longfunc():
+    for i in range(100000000):
+        1**4
+
+longfunc()

@@ -1,20 +1,11 @@
-import sys
-import random
+# my_file = open('text.txt')
 
-first = int(sys.argv[1])
-last = int(sys.argv[2])
+# print(my_file.read())
 
-numb = random.randint(first, last)
+# my_file.close()
 
-while True:
-    guess = input('Guess the number(1-20): ')
-    try:
-        if numb == int(guess):
-            print(numb)
-            print('You guessed right')
-            break
-        else:
-            print(f'{guess} is not the right number')
-            continue
-    except ValueError:
-        print('please enter a number')
+try:
+    with open('..\\te3xt.txt', mode='r') as my_file:
+        print(my_file.read())
+except FileNotFoundError as err:
+    print(err)

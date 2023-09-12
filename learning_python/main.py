@@ -1,24 +1,20 @@
-def fib(num):
-    a = 0
-    b = 1
-    for i in range(num):
-        yield a
-        temp = a
-        a = b
-        b = temp + b
+import sys
+import random
 
-for i in fib(20):
-    print(i)        #generator method
+first = int(sys.argv[1])
+last = int(sys.argv[2])
 
-# def fib(num):
-#     a = 0
-#     b = 1
-#     result = []
-#     for i in range(num):
-#         result.append(a)
-#         temp = a
-#         a = b
-#         b = b + temp
-#     return result
+numb = random.randint(first, last)
 
-# print(fib(20))
+while True:
+    guess = input('Guess the number(1-20): ')
+    try:
+        if numb == int(guess):
+            print(numb)
+            print('You guessed right')
+            break
+        elif guess != numb:
+            print(f'{guess} is not the right number')
+            continue
+    except ValueError:
+        print('please enter a number')

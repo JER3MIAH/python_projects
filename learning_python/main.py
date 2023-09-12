@@ -13,7 +13,7 @@ while True:
             print(numb)
             print('You guessed right')
             break
-        elif guess != numb:
+        else:
             print(f'{guess} is not the right number')
             continue
     except ValueError:

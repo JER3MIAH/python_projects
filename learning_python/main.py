@@ -1,9 +1,10 @@
-from translate import Translator
+import re
 
-try:
-    with open('text.txt') as my_file:
-        text = my_file.read()
-    translated = Translator(to_lang='fr')
-    print(translated.translate(text))
-except FileNotFoundError:
-    print('File does not exist')
+pattern = re.compile(r"([a-zA-Z]).(a)")
+string = 'search inside this text please'
+
+a = pattern.search(string)
+b = pattern.findall(string)
+c = pattern.fullmatch(string)
+d = pattern.match(string)
+print(a.group())

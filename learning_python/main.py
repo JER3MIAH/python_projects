@@ -1,11 +1,9 @@
-# my_file = open('text.txt')
-
-# print(my_file.read())
-
-# my_file.close()
+from translate import Translator
 
 try:
-    with open('..\\te3xt.txt', mode='r') as my_file:
-        print(my_file.read())
-except FileNotFoundError as err:
-    print(err)
+    with open('text.txt') as my_file:
+        text = my_file.read()
+    translated = Translator(to_lang='fr')
+    print(translated.translate(text))
+except FileNotFoundError:
+    print('File does not exist')
